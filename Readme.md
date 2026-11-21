@@ -60,33 +60,6 @@
 
 ---
 
-## 🏗️ How to Build
-
-### Option A: Automated Build via GitHub Actions (Recommended)
-
-1. Upload `app-source.zip` and `.github/workflows/build-release.yml` to your GitHub repository root.
-2. Push a git release tag starting with `v` (e.g., `v1.0.0`):
-   ```bash
-   git tag v1.0.0
-   git push origin v1.0.0
-   ```
-3. GitHub Actions will automatically unzip the source, compile the APK using `./gradlew assembleRelease`, upload the APK artifact, and publish a GitHub Release with the APK attached.
-
-### Option B: Local Manual Build
-
-**Prerequisites:** JDK 17+ and Android SDK 34 (Android 14) installed.
-
-1. Unzip `app-source.zip` locally.
-2. Open terminal in `sc-net-android/`:
-   ```bash
-   cd sc-net-android
-   ./gradlew assembleRelease
-   ```
-3. The generated release APK will be located at:
-   `app/build/outputs/apk/release/app-release.apk`
-
----
-
 ## 🔐 Permissions & Android Limits
 
 * **Permissions Used:** `INTERNET`, `ACCESS_NETWORK_STATE`, `ACCESS_WIFI_STATE`, `ACCESS_FINE_LOCATION`, `NEARBY_WIFI_DEVICES`.
